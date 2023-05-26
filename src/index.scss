@@ -1,13 +1,121 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #202020;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Inter', sans-serif,
     monospace;
+}
+
+@import './styles/light-theme.scss';
+@import './styles/dark-theme.scss';
+@import './styles/grey-theme.scss';
+
+.light-theme {
+  @each $hue, $color in $light-theme-primary {
+    .bg-primary-#{$hue} {
+      background-color: $color;
+    }
+
+    .bg-primary-light-#{$hue} {
+      background-color: $color;
+    }
+  };
+
+  body {
+    color: #202020;
+  }
+}
+
+.dark-theme {
+  @each $hue, $color in $dark-theme-primary {
+    .bg-primary-#{$hue} {
+      background-color: $color;
+    }
+
+    .bg-primary-dark-#{$hue} {
+      background-color: $color;
+    }
+  };
+
+  body {
+    color: #F5F2F2;
+  }
+}
+
+@each $hue, $color in $grey-theme {
+  .bg-grey-#{$hue} {
+    background-color: $color;
+  }
+
+  .color-grey-#{$hue} {
+    color: $color;
+  }
+}
+
+$font-sizes: (
+  8: 8px,
+  10: 10px,
+  11: 11px,
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  22: 22px,
+);
+
+@each $size, $value in $font-sizes {
+  .f-#{$size} {
+    font-size: $value;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #FAFAFA !important;
+
+  &.hover {
+    &:hover {
+      color: #282a26 !important;
+    }
+  }
+}
+
+.text-dark {
+  color: #282a26 !important;
+
+  &.hover {
+    &:hover {
+      color: #FAFAFA !important;
+    }
+  }
+}
+
+.box-limited {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.box-limited::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 3px;
+  }
+
+  &.box-limited::-webkit-scrollbar-track {
+    background: #cccccc;
+  }
+
+  &.box-limited::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  &.box-limited::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
