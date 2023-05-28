@@ -1,0 +1,38 @@
+.app-header {
+  height: 180px;
+
+  .themes {
+    margin-right: 4em;
+
+    .theme-icon {
+      color: #505050;
+      transition: color .4s ease;
+      font-size: 40px;
+  
+      &.light:hover {
+        color: #d1ce29;
+      }
+  
+      &.dark:hover {
+        color: #1f0dc5;
+      }
+    }
+  }
+
+  .btn-logo {
+    &:focus {
+      box-shadow: none;
+    }
+
+    .product-logo {
+      height: 80px;
+      width: 320px;
+      margin-left: 4em;
+      // margin-top: -6px;
+      // background-image: url('../../assets/images/Logo_full_1.svg');
+      
+      background-image: url('../../assets/images/Logo_full_4.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

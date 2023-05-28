@@ -24,6 +24,10 @@ code {
     .bg-primary-light-#{$hue} {
       background-color: $color;
     }
+
+    .color-primary-#{$hue} {
+      color: $color;
+    }
   };
 
   body {
@@ -39,6 +43,10 @@ code {
 
     .bg-primary-dark-#{$hue} {
       background-color: $color;
+    }
+
+    .color-primary-#{$hue} {
+      color: $color;
     }
   };
 
