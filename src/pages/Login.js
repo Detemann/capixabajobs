@@ -1,9 +1,19 @@
-import HeaderNavbar from "../components/HeaderNavbar/HeaderNavbar";
+import LoginHeader from "../components/Login/LoginHeader";
+import LoginFields from "../components/Login/LoginFields";
+import LoginImage from "../components/Login/LoginImage";
+import "../components/Login/Login.scss";
+
+
 function Login() {
-    return (
-        <HeaderNavbar showThemeIcons="true" />
-        
-    );
+  return (
+    <>
+      <LoginHeader />
+      <div className="d-flex row">
+        <LoginFields />
+        <LoginImage />
+      </div>
+    </>
+  );
 }
 
 export default Login;
