@@ -1,7 +1,5 @@
 import React from 'react';
-
 import './HeaderNavbar.scss';
-import { Button, Stack } from '@mui/material';
 
 function HeaderNavbar(props) {
   return (
@@ -12,14 +10,6 @@ function HeaderNavbar(props) {
             <div className="product-logo"></div>
           </button>
         </header>
-      </div>
-      <div className="d-flex row">
-      <Stack spacing={2} direction="row">
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="contained" color='secondary'>Contained</Button>
-        <Button variant="outlined" color='secondary'>Outlined</Button>
-      </Stack>
       </div>
     </>
   )
