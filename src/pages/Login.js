@@ -1,18 +1,17 @@
 import LoginHeader from "../components/Login/LoginHeader";
 import LoginFields from "../components/Login/LoginFields";
 import LoginImage from "../components/Login/LoginImage";
-import "../components/Login/Login.scss";
 
 
 function Login() {
   return (
-    <>
+    <div className="d-flex row ms-5 me-2">
       <LoginHeader />
-      <div className="d-flex row">
+      <div className="d-flex">
         <LoginFields />
         <LoginImage />
       </div>
-    </>
+    </div>
   );
 }
 

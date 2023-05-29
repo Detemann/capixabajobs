@@ -1,6 +1,8 @@
+import "./LoginImage.scss";
+
 function LoginImage() {
     return(
-        <div className="d-flex row col-7 justify-content-center">
+        <div className="d-flex row justify-content-center" style={{marginRight: 50}}>
           <h1 style={{ textAlign: "center", color: '#00816D' }}>
             Conheça sua comunidade profissional!
           </h1>
