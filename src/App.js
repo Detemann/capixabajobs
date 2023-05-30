@@ -5,6 +5,7 @@ import { ThemeProvider } from "@emotion/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Singup from "./pages/Signup";
 
 function App() {
   const theme = createTheme({
@@ -24,12 +25,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-          <Route path="login" element={<Login />}>
-            <Route index element={<Login />}/>
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="singup" element={<Singup />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
