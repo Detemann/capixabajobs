@@ -13,7 +13,7 @@ function LoginFields() {
     setInputs((prevState)=>({
       ...prevState,
       [event.target.name] : event.target.value 
-    }))
+    }));
   }
 
   const handleSubmit = (event) => {
