@@ -7,7 +7,7 @@ function Login3party() {
     <div className="d-flex row row-cols-6 justify-content-center">
       <div className="d-flex col-3 justify-content-center">
         <IconButton aria-label="delete" size="large">
-          <GoogleIcon style={{}} fontSize="inherit" />
+          <GoogleIcon fontSize="inherit" />
         </IconButton>
       </div>
       <div className="d-flex col-3 justify-content-center">
