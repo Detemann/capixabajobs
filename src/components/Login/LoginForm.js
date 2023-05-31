@@ -5,28 +5,31 @@ import { useState } from "react";
 
 function LoginFields() {
   const [inputs, setInputs] = useState({
-    email: '',
-    senha: '',
+    email: "",
+    senha: "",
   });
 
   const handleChange = (event) => {
-    setInputs((prevState)=>({
+    setInputs((prevState) => ({
       ...prevState,
-      [event.target.name] : event.target.value 
+      [event.target.name]: event.target.value,
     }));
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs, "Submited!");
-  }
+  };
 
   return (
     <>
-      <form className="d-flex row col align-content-center" onSubmit={handleSubmit}>
-        <div className="d-flex row justify-content-center ms-4">
+      <form
+        className="d-flex row align-content-center justify-content-center"
+        onSubmit={handleSubmit}
+      >
+        <div className="d-flex flex-wrap justify-content-center">
           <TextField
-            name='email'
+            name="email"
             value={inputs.email}
             onChange={handleChange}
             label="E-mail"
@@ -34,7 +37,7 @@ function LoginFields() {
             className="w-75 m-4"
           />
           <TextField
-            name='senha'
+            name="senha"
             value={inputs.senha}
             onChange={handleChange}
             label="Senha"
@@ -42,16 +45,18 @@ function LoginFields() {
             type="password"
             className="w-75 m-4 mt-1"
           />
-          <br></br>
+        </div>
+        <div className="d-flex ps-2 w-75 p-0 m-0">
           <Link
             for="#"
-            className="m-2 text-decoration-none"
-            style={{ color: "#00816D", paddingLeft: 55 }}
+            className="text-decoration-none"
+            style={{ color: "#00816D" }}
           >
             Esqueceu a senha?
           </Link>
-          <br></br>
-          <Button type="submit" variant="contained" className="w-75 m-4 mt-4">
+        </div>
+        <div className="d-flex flex-wrap justify-content-center">
+          <Button type="submit" variant="contained" className="w-50 m-4 mt-4">
             Entrar
           </Button>
           <hr className="mt-4"></hr>
