@@ -24,7 +24,7 @@ function LoginFields() {
   return (
     <>
       <form
-        className="d-flex row align-content-center justify-content-center"
+        className="d-flex row align-content-end justify-content-center"
         onSubmit={handleSubmit}
       >
         <div className="d-flex flex-wrap justify-content-center">
@@ -34,7 +34,8 @@ function LoginFields() {
             onChange={handleChange}
             label="E-mail"
             variant="outlined"
-            className="w-75 m-4"
+            className="w-75"
+            margin="normal"
           />
           <TextField
             name="senha"
@@ -43,7 +44,8 @@ function LoginFields() {
             label="Senha"
             variant="outlined"
             type="password"
-            className="w-75 m-4 mt-1"
+            className="w-75"
+            margin="normal"
           />
         </div>
         <div className="d-flex ps-2 w-75 p-0 m-0">
@@ -55,11 +57,11 @@ function LoginFields() {
             Esqueceu a senha?
           </Link>
         </div>
-        <div className="d-flex flex-wrap justify-content-center">
+        <div className="d-flex row flex-wrap justify-content-center">
           <Button type="submit" variant="contained" className="w-50 m-4 mt-4">
             Entrar
           </Button>
-          <hr className="mt-4"></hr>
+          <hr className="mt-lg-4"></hr>
           <Login3party />
         </div>
       </form>
