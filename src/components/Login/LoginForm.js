@@ -24,10 +24,10 @@ function LoginFields() {
   return (
     <>
       <form
-        className="d-flex row align-content-end justify-content-center"
+        className="d-flex row align-content-center mt-5 justify-content-center"
         onSubmit={handleSubmit}
       >
-        <div className="d-flex flex-wrap justify-content-center">
+        <div className="d-flex flex-wrap w-75 mt-5 mb-1 justify-content-center">
           <TextField
             name="email"
             value={inputs.email}
@@ -47,21 +47,19 @@ function LoginFields() {
             className="w-75"
             margin="normal"
           />
-        </div>
-        <div className="d-flex ps-2 w-75 p-0 m-0">
           <Link
             for="#"
-            className="text-decoration-none"
+            className="text-decoration-none m-3"
             style={{ color: "#00816D" }}
           >
             Esqueceu a senha?
           </Link>
         </div>
-        <div className="d-flex row flex-wrap justify-content-center">
-          <Button type="submit" variant="contained" className="w-50 m-4 mt-4">
+        <div className="d-flex p-0 m-0 w-50 row flex-wrap justify-content-center">
+          <Button type="submit" variant="contained" className="w-50">
             Entrar
           </Button>
-          <hr className="mt-lg-4"></hr>
+          <hr className="d-inline-block mt-lg-4 p-0 m-0" />
           <Login3party />
         </div>
       </form>
