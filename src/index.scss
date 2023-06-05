@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Inter', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  // font-family: 'Inter', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #202020;
@@ -15,53 +15,53 @@ code {
 @import './styles/dark-theme.scss';
 @import './styles/grey-theme.scss';
 
-.light-theme {
-  @each $hue, $color in $light-theme-primary {
-    .bg-primary-#{$hue} {
-      background-color: $color;
-    }
-
-    .bg-primary-light-#{$hue} {
-      background-color: $color;
-    }
-
-    .color-primary-#{$hue} {
-      color: $color;
-    }
-  };
-
-  body {
-    color: #202020;
+@each $hue, $color in $light-theme-primary {
+  .bg-primary-light-#{$hue} {
+    background-color: $color !important;
   }
-}
 
-.dark-theme {
-  @each $hue, $color in $dark-theme-primary {
-    .bg-primary-#{$hue} {
-      background-color: $color;
-    }
-
-    .bg-primary-dark-#{$hue} {
-      background-color: $color;
-    }
-
-    .color-primary-#{$hue} {
-      color: $color;
-    }
-  };
-
-  body {
-    color: #F5F2F2;
+  .color-primary-light#{$hue} {
+    color: $color !important;
   }
-}
+};
+
+@each $hue, $color in $light-theme-secondary {
+  .bg-secondary-light-#{$hue} {
+    background-color: $color !important;
+  }
+
+  .color-secondary-light#{$hue} {
+    color: $color !important;
+  }
+};
+
+@each $hue, $color in $dark-theme-primary {
+  .bg-primary-dark-#{$hue} {
+    background-color: $color !important;
+  }
+
+  .color-primary-dark#{$hue} {
+    color: $color !important;
+  }
+};
+
+@each $hue, $color in $dark-theme-secondary {
+  .bg-secondary-dark-#{$hue} {
+    background-color: $color !important;
+  }
+
+  .color-secondary-dark#{$hue} {
+    color: $color !important;
+  }
+};
 
 @each $hue, $color in $grey-theme {
   .bg-grey-#{$hue} {
-    background-color: $color;
+    background-color: $color !important;
   }
 
   .color-grey-#{$hue} {
-    color: $color;
+    color: $color !important;
   }
 }
 

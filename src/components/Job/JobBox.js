@@ -1,14 +1,17 @@
+import { useState } from "react";
 import JobCard from "./JobCard/JobCard";
-import './JobBox.scss';
 import JobDetail from "./JobDetail/JobDetail";
 import { IconButton, Stack, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import './JobBox.scss';
+import Jobs from './MockJobs.json';
 
 function JobBox() {
-  const jobsList = [
-    { jobTitle: 'Trampo 1', jobCompanyName: 'FAESA', jobShortDescription: 'Estagiário do NAT' },
-    {}, {}, {}, {}, {}, {}, {}, {},
-  ];
+  const [selectedJob, setSelectedJob] = useState({});
+
+  const onSelectCardClick = (card) => {
+    setSelectedJob(card);
+  };
 
   return (
     <div className="job-box">
@@ -23,21 +26,25 @@ function JobBox() {
 
       <div className="row">
         <div className="d-flex w-50 p-5 flex-column job-list box-limited">
-          { jobsList.map((job) => (
-            <div className="p-0 m-0 mb-5">
-              <JobCard 
-                jobTitle={ job.jobTitle }
-                jobCompanyName={ job.jobCompanyName }
-                jobShortDescription={ job.jobShortDescription }
-              />
-            </div>
-          ))
-
+          { Jobs.jobs.map((job, index) => (
+              <div className="p-0 m-0 mb-5" key={ index }>
+                <JobCard 
+                  jobObj={ job }
+                  onSelectCard={ onSelectCardClick }
+                />
+              </div>
+            ))
           }
         </div>
 
         <div className="d-flex w-50 p-5 job-detail">
-          <JobDetail />
+          { selectedJob &&
+            selectedJob.title &&
+            <JobDetail 
+              jobObj={ selectedJob }
+              onCloseCard={ onSelectCardClick }
+            />
+          }
         </div>
       </div>
     </div>

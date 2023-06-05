@@ -19,6 +19,12 @@ function App() {
         main: "#e64a19",
       },
     },
+    typography: {
+      fontFamily: [ 'Inter' ],
+      allVariants: {
+        color: '#202020',
+      },
+    },
   });
 
   return (

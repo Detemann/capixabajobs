@@ -1,9 +1,10 @@
 .job-box {
-  padding-left: 8em;
-  padding-right: 8em;
+  padding-left: 4em;
+  padding-right: 4em;
 
   .job-list {
-    height: 75vh;
+    min-height: 400px;
+    max-height: 500px;
     // overflow: auto;
   }
 }
