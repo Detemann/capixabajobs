@@ -24,7 +24,7 @@ function SignUpForm() {
     <form className="d-flex col justify-content-center h-auto">
       <Card className="d-flex flex-wrap justify-content-center align-content-center w-50">
         <div className="product-signup-logo mb-2"></div>
-        <h3 className="mb-1 w-100">Bem-Vindo ao CapixabaJobs</h3>
+        <h3 className="mb-1 w-100">Bem-vindo ao CapixabaJobs</h3>
         <TextField
           name="name"
           value={inputs.name}

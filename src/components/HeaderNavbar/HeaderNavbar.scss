@@ -1,5 +1,6 @@
 .app-header {
   height: 100%;
+  padding-top: 3em;
 
   .themes {
     margin-right: 4em;
@@ -20,19 +21,41 @@
   }
 
   .btn-logo {
+    margin-left: 11em;
+    margin-bottom: 30px;
+
     &:focus {
       box-shadow: none;
     }
 
-    .product-logo {
-      height: 50px;
-      width: 320px;
-      margin-left: 4em;
-      margin-bottom: 30px;
-      // margin-top: -6px;
-      // background-image: url('../../assets/images/Logo_full_1.svg');
-      
-      background-image: url('../../assets/images/Logo_full_4.svg');
+    .product-logo-full {
+      height: 80px;
+      width: 400px;
+      background-image: url('../../assets/images/Logo_full.svg');
+      background-repeat: no-repeat;
+    }
+
+    .product-logo-min {
+      height: 70px;
+      width: 70px;
+      background-image: url('../../assets/images/Logo_minimal.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn-user {
+    margin-right: 11em;
+    margin-bottom: 30px;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .icon {
+      height: 64px;
+      width: 64px;
+      display: flex;
+      background-image: url('../../assets/images/avatar-default.svg');
       background-repeat: no-repeat;
     }
   }

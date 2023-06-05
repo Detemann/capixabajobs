@@ -2,10 +2,10 @@ import React from "react";
 import "./App.scss";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Singup from "./pages/Signup";
+import Signup from "./pages/Signup";
 
 function App() {
   const theme = createTheme({
@@ -25,9 +25,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
           <Route path="login" element={<Login />} />
-          <Route path="singup" element={<Singup />} />
+          <Route path="signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

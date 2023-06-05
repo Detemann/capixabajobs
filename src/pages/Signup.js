@@ -3,8 +3,6 @@ import feedSignUpImage from "../assets/images/feed_draw_singup.svg";
 import SignUpForm from "../components/SignUp/SignUpForm";
 import "../components/SignUp/SignUp.scss";
 
-
-
 function Signup() {
   return (
     <>
