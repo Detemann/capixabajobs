@@ -1,10 +1,17 @@
 .job-box {
-  padding-left: 4em;
-  padding-right: 4em;
+  padding-top: .5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  // background-color: #E0E0E0;
 
   .job-list {
     min-height: 400px;
-    max-height: 500px;
+    max-height: 60vh;
     // overflow: auto;
+  }
+
+  .job-detail {
+    min-height: 400px;
+    // max-height: 60vh;
   }
 }

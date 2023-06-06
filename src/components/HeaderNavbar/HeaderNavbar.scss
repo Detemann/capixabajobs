@@ -46,17 +46,5 @@
   .btn-user {
     margin-right: 7em;
     margin-bottom: 30px;
-
-    &:focus {
-      box-shadow: none;
-    }
-
-    .icon {
-      height: 64px;
-      width: 64px;
-      display: flex;
-      background-image: url('../../assets/images/avatar-default.svg');
-      background-repeat: no-repeat;
-    }
   }
 }

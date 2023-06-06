@@ -1,5 +1,5 @@
-import { Card, CardActions, CardContent, IconButton, Typography } from "@mui/material";
-import ShareIcon from "@mui/icons-material/Share";
+import { Card, CardActions, CardContent, Fab, IconButton, Typography } from "@mui/material";
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import CloseIcon from "@mui/icons-material/Close";
 
 function JobDetail(props) {
@@ -11,7 +11,7 @@ function JobDetail(props) {
 
   return (
     <>
-       <Card sx={{ minWidth: '100%', minHeight: '100%' }} className="" elevation={2}>
+       <Card sx={{ minWidth: '100%', maxHeight: '60vh', overflow: 'auto' }} className="box-limited" elevation={2}>
         <CardContent sx={{ minHeight: '100%' }}>
           <div className="d-flex w-100 justify-content-between">
             <Typography variant="h3" component="div">
@@ -27,20 +27,19 @@ function JobDetail(props) {
           <Typography variant="subtitle" className="ps-2">
             { card.shortDescription || 'Resumo da vaga' }
           </Typography>
-          <Typography variant="body2" className="ps-2">
+          <Typography variant="body2" className="ps-2 text-justify">
             { card.description ?
-              card.description.map((paragraph) => 
-              `${paragraph}`
+              card.description.map((paragraph) => (<p>{`${ paragraph }\n`}</p>)
             )
               : 'Descrição da vaga'
             }
           </Typography>
         </CardContent>
 
-        <CardActions className="px-4">
-          <IconButton aria-label="share" color="secondary" size="large">
-            <ShareIcon />
-          </IconButton>
+        <CardActions className="px-4 justify-content-end">
+          <Fab color="secondary" aria-label="share" size="small" className="mx-3">
+            <ShareRoundedIcon fontSize="medium" />
+          </Fab>
         </CardActions>
       </Card>
     </>

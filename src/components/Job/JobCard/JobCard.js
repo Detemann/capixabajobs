@@ -1,5 +1,6 @@
-import { Button, Card, CardActions, CardContent, Fab, Typography } from "@mui/material";
+import { Card, CardActions, CardContent, Fab, Typography } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import './JobCard.scss';
 
 function JobCard(props) {
@@ -12,9 +13,8 @@ function JobCard(props) {
   return (
     <Card 
       sx={{ minWidth: 275 }}
-      className="pb-2 ps-2 job-card cursor-pointer"
+      className="pb-2 ps-2 job-card"
       elevation={3}
-      onClick={ handleCardClick }
     >
       <CardContent>
         <div className="d-inline-block" style={{ width: '90%' }}>
@@ -30,14 +30,18 @@ function JobCard(props) {
         </div>
 
         <div className="d-inline-block" style={{ width: '10%' }}>
-        <Fab color="secondary" aria-label="edit" size="small">
-          <ArrowForwardIosIcon />
-        </Fab>
+          
         </div>
       </CardContent>
 
-      <CardActions className="px-4">
-        <Button size="small" variant="contained">Compartilhar</Button>
+      <CardActions className="px-4 justify-content-end">
+        <Fab color="secondary" aria-label="edit" size="small" className="mx-3">
+          <ShareRoundedIcon />
+        </Fab>
+        
+        <Fab color="primary" aria-label="edit" size="small" className="mx-3" onClick={ handleCardClick }>
+          <ArrowForwardIosIcon />
+        </Fab>
       </CardActions>
     </Card>
   )

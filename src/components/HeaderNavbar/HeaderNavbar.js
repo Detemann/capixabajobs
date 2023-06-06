@@ -1,5 +1,7 @@
+import { Fab } from '@mui/material';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import './HeaderNavbar.scss';
 
 function HeaderNavbar(props) {
@@ -16,10 +18,9 @@ function HeaderNavbar(props) {
           </button>
 
           { props.showUserIcon &&
-            <button className="btn btn-user p-0 d-flex">
-              <div className="icon">
-              </div>
-            </button>
+            <Fab color="secondary" aria-label="edit" className="btn-user">
+              <AccountCircleRoundedIcon fontSize="large" />
+            </Fab>
           }
         </header>
       </div>
