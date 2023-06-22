@@ -1,11 +1,13 @@
 import HeaderNavbar from "../components/HeaderNavbar/HeaderNavbar";
+import UserInfoCard from "../components/Perfil/UserInfoCard";
 
 function Perfil() {
   return (
-    <>
-      <HeaderNavbar />
-      <h1>PERFIL123</h1>
-    </>
+    <div className='mx-5'>
+      <HeaderNavbar logoFull={ false } showUserIcon={ false } userAvatar={ true } />
+      <UserInfoCard />
+    </div>
+      
   );
 }
 
