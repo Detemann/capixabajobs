@@ -1,5 +1,4 @@
 import { Card, TextField } from "@mui/material";
-import Jobs from "../Job/MockJobs.json";
 
 function UserInfoCard() {
 
@@ -27,8 +26,8 @@ function UserInfoCard() {
             <h3 className="w-100 mt-3">Vagas Inscritas</h3>
             <div className="d-flex row w-100 shadow-sm mb-3">
                 <h5>Dev Frontend Angular</h5>
-                <p>Koopere</p>
-                <h6>A Koopere está com oportunidade para Desenvolvedor Front-end Angular | Pleno para projeto no nosso cliente SUPERO SOLUÇÕES.</h6>
+                <p>CapixabaJobs</p>
+                <h6>O CapixabaJobs está com oportunidade para Desenvolvedor Front-end React | Pleno para projeto do nosso cliente MESTRE SOLUÇÕES.</h6>
             </div>
         </Card>
         </div>

@@ -1,20 +1,28 @@
 .draw-feed-image {
-    height: 600px;
-    width: 600px;
+  height: 600px;
+  width: 600px;
 
-    background-image: url('../../assets/images/feed_draw_singup.svg');
-    background-repeat: no-repeat;
+  background-image: url('../../assets/images/feed_draw_singup.svg');
+  background-repeat: no-repeat;
 }
 
 .product-signup-logo {
-    height: 48px;
-    width: 48px;
+  height: 48px;
+  width: 48px;
 
-    background-image: url('../../assets/images/Logo_minimal.svg');
-    background-repeat: no-repeat;    
+  background-image: url('../../assets/images/Logo_minimal.svg');
+  background-repeat: no-repeat;    
 }
 
 h3 {
-    text-align: center;
-    color: #00816D;
+  text-align: center;
+  color: #00816D;
+}
+
+.login-link {
+  color: #00816D;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

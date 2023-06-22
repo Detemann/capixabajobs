@@ -5,7 +5,7 @@ function Home() {
   
   return (
     <div className="mx-5">
-      <HeaderNavbar logoFull={ false } showUserIcon={ true } />
+      <HeaderNavbar logoFull={ false } userAvatar={ true } />
       {/* <h1>VAGAS</h1>
       <Button variant="contained" onClick={buttonHandler}>Login</Button> */}
       <JobBox />

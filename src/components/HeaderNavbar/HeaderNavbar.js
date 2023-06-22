@@ -1,19 +1,31 @@
-import { Fab, Avatar } from "@mui/material";
+import { Fab, Avatar, Button } from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import userAvatar from "../../assets/images/wanderson.jpeg";
 import "./HeaderNavbar.scss";
 
 function HeaderNavbar(props) {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const allowedNavbarClick = [
+    '/home',
+    '/perfil',
+  ];
 
   const buttonHandler = () => {
-    navigate("/home");
+    if (allowedNavbarClick.includes(location.pathname)) {
+      navigate("/home");
+    }
   };
   const userButtonHandler = () => {
     navigate("/perfil");
   };
+
+  const logoutButtonHandler = () => {
+    navigate("/login")
+  }
 
   return (
     <>
@@ -39,14 +51,26 @@ function HeaderNavbar(props) {
           )}
 
           {props.userAvatar && (
-            <Fab
-              color="secondary"
-              aria-label="edit"
-              className="btn-user"
-              onClick={userButtonHandler}
+            <div
+              className="btn-user d-flex flex-column align-items-center"
             >
-              <Avatar alt='wanderson' src={userAvatar} />
-            </Fab>
+              <Fab
+                color="secondary"
+                aria-label="edit"
+                onClick={userButtonHandler}
+              >
+                <Avatar alt='wanderson' src={userAvatar} />
+              </Fab>
+
+              <Button
+                className="p-0 mt-2 w-100"
+                variant="outlined"
+                color="error"
+                onClick={logoutButtonHandler}
+              >
+                Sair
+              </Button>
+            </div>
           )}
         </header>
       </div>

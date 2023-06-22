@@ -1,13 +1,15 @@
 import { Button, TextField } from "@mui/material";
 import Login3party from "./Login3party";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function LoginFields() {
   const [inputs, setInputs] = useState({
-    email: "",
-    senha: "",
+    email: "email.usuario@outlook.com",
+    senha: "senha123",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setInputs((prevState) => ({
@@ -18,7 +20,10 @@ function LoginFields() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputs, "Submited!");
+    
+    if (inputs.email.length > 0 && inputs.senha.length > 0) {
+      navigate("/home");
+    }
   };
 
   return (
